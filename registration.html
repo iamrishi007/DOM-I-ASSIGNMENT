@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration</title>
+</head>
+
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+
+		let selName = document.getElementById("name");
+		let name = document.getElementById("dName");
+
+		function showName() {
+			console.log(name.innerText = selName.value);
+		}
+
+		let selGen = document.getElementById("gender");
+		let gen = document.getElementById("dGender");
+
+		function showGender() {
+			console.log(gen.innerText = selGen.value);
+		}
+
+		let selEmail = document.getElementById("email");
+		let mail = document.getElementById("dEmail");
+
+		function showEmail() {
+			console.log(mail.innerText = selEmail.value);
+		}
+
+		let selMobile = document.getElementById("mobile");
+		let mobile = document.getElementById("dMobile");
+
+		function showMobile() {
+			console.log(mobile.innerText = selMobile.value)
+		}
+
+
+
+
+		function resetForm() {
+
+			// Reset all the form elements to default values (blank "")
+			console.log(document.getElementById("name").value = " ")
+			console.log(document.getElementById("gender").value = " ")
+			console.log(document.getElementById("email").value = " ")
+			console.log(document.getElementById("mobile").value = " ")
+
+
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+			console.log(name.innerText = " ")
+			console.log(gen.innerText = " ")
+			console.log(mail.innerText = " ")
+			console.log(mobile.innerText = " ")
+		}
+	</script>
+</body>
+
+</html>
